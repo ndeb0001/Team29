@@ -26,31 +26,31 @@ pwm_right_reverse.start(0)
 
 while True:
     x = input("::::")
-    if x==1:
+    if x=="w":
         print("forward")
         pwm_left_forward.ChangeDutyCycle(25)
         pwm_left_reverse.ChangeDutyCycle(0)
         pwm_right_forward.ChangeDutyCycle(25)
         pwm_right_reverse.ChangeDutyCycle(0)
-    elif x==2:
+    elif x=="s":
         print("reverse")
         pwm_left_forward.ChangeDutyCycle(0)
         pwm_left_reverse.ChangeDutyCycle(25)
         pwm_right_forward.ChangeDutyCycle(0)
         pwm_right_reverse.ChangeDutyCycle(25)
-    elif x==3:
+    elif x=="a":
         print("left")
         pwm_left_forward.ChangeDutyCycle(0)
         pwm_left_reverse.ChangeDutyCycle(25)
         pwm_right_forward.ChangeDutyCycle(25)
         pwm_right_reverse.ChangeDutyCycle(0)
-    elif x==4:
+    elif x=="d":
         print("right")
         pwm_left_forward.ChangeDutyCycle(25)
         pwm_left_reverse.ChangeDutyCycle(0)
         pwm_right_forward.ChangeDutyCycle(25)
         pwm_right_reverse.ChangeDutyCycle(0)
-    elif x==5:
+    elif x=="b":
         pwm_left_forward.ChangeDutyCycle(0)
         pwm_left_reverse.ChangeDutyCycle(0)
         pwm_right_forward.ChangeDutyCycle(0)
@@ -61,6 +61,7 @@ while True:
         pwm_left_reverse.ChangeDutyCycle(0)
         pwm_right_forward.ChangeDutyCycle(0)
         pwm_right_reverse.ChangeDutyCycle(0)
+    sleep(1)
 
 pwm_left_forward.stop()
 pwm_left_reverse.stop()
