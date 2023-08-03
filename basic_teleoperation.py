@@ -1,6 +1,6 @@
 from time import sleep
 from RPi import GPIO
-import keyboard
+
 
 GPIO.setmode(GPIO.BOARD)
 
@@ -25,31 +25,32 @@ pwm_right_forward.start(0)
 pwm_right_reverse.start(0)
 
 while True:
-    if keyboard.is_pressed('up'):
+    x = input("::::")
+    if x==1:
         print("forward")
         pwm_left_forward.ChangeDutyCycle(25)
         pwm_left_reverse.ChangeDutyCycle(0)
         pwm_right_forward.ChangeDutyCycle(25)
         pwm_right_reverse.ChangeDutyCycle(0)
-    elif keyboard.is_pressed('down'):
+    elif x==2:
         print("reverse")
         pwm_left_forward.ChangeDutyCycle(0)
         pwm_left_reverse.ChangeDutyCycle(25)
         pwm_right_forward.ChangeDutyCycle(0)
         pwm_right_reverse.ChangeDutyCycle(25)
-    elif keyboard.is_pressed('left'):
+    elif x==3:
         print("left")
         pwm_left_forward.ChangeDutyCycle(0)
         pwm_left_reverse.ChangeDutyCycle(25)
         pwm_right_forward.ChangeDutyCycle(25)
         pwm_right_reverse.ChangeDutyCycle(0)
-    elif keyboard.is_pressed('right'):
+    elif x==4:
         print("right")
         pwm_left_forward.ChangeDutyCycle(25)
         pwm_left_reverse.ChangeDutyCycle(0)
         pwm_right_forward.ChangeDutyCycle(25)
         pwm_right_reverse.ChangeDutyCycle(0)
-    elif keyboard.is_pressed('b'):
+    elif x==5:
         pwm_left_forward.ChangeDutyCycle(0)
         pwm_left_reverse.ChangeDutyCycle(0)
         pwm_right_forward.ChangeDutyCycle(0)
