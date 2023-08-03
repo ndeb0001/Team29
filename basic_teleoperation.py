@@ -24,7 +24,9 @@ pwm_left_reverse.start(0)
 pwm_right_forward.start(0)
 pwm_right_reverse.start(0)
 
-while True:
+moves = ["w","s","a","d","a"]
+
+for move in moves:
     x = input("::::")
     if x=="w":
         print("forward")
