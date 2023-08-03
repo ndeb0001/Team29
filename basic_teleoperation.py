@@ -56,12 +56,12 @@ while True:
         pwm_right_forward.ChangeDutyCycle(0)
         pwm_right_reverse.ChangeDutyCycle(0)
         break
-
+    sleep(1)
     pwm_left_forward.ChangeDutyCycle(0)
     pwm_left_reverse.ChangeDutyCycle(0)
     pwm_right_forward.ChangeDutyCycle(0)
     pwm_right_reverse.ChangeDutyCycle(0)
-    sleep(1)
+    
 
 pwm_left_forward.stop()
 pwm_left_reverse.stop()
