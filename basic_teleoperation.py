@@ -48,8 +48,8 @@ while True:
         print("right")
         pwm_left_forward.ChangeDutyCycle(25)
         pwm_left_reverse.ChangeDutyCycle(0)
-        pwm_right_forward.ChangeDutyCycle(25)
-        pwm_right_reverse.ChangeDutyCycle(0)
+        pwm_right_forward.ChangeDutyCycle(0)
+        pwm_right_reverse.ChangeDutyCycle(25)
     elif x=="b":
         pwm_left_forward.ChangeDutyCycle(0)
         pwm_left_reverse.ChangeDutyCycle(0)
